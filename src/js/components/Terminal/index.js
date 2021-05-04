@@ -576,7 +576,7 @@ class Terminal extends Component {
     const { summary } = instance.state;
     let index = args.line;
     if (index < 0) {
-      index = summary.length === 0 ? 0 : summary.length - index;
+      index = summary.length === 0 ? 0 : summary.length + index;
     }
     summary[index] = args._.join(' ');
     instance.setState({ summary });
